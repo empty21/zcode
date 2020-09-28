@@ -1,7 +1,7 @@
-##Warning
+## Warning
 Tất cả những bài code trên chỉ mang giá trị tham khảo. Vui lòng đừng lấy nó để submit trực tiếp lên trang [zCode](http://code.ptit.edu.vn).<br>
 
-###Credit
+### Credit
 Thieu Quan Ngoc <br>
 [![alt text][facebook-icon]][facebook-link]
 [![alt text][github-icon]][facebook-link]
