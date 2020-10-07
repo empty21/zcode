@@ -1,4 +1,4 @@
-//--===-- Created by Thieu Quan Ngoc on 9/28/20. --===--//
+//--===-- Created by Thieu Quan Ngoc on 10/7/20. --===--//
 //      _______ _     _             ____  _   _         //
 //     |__   __| |   (_)           / __ \| \ | |        //
 //        | |  | |__  _  ___ _   _| |  | |  \| |        //
@@ -6,27 +6,31 @@
 //        | |  | | | | |  __/ |_| | |__| | |\  |        //
 //        |_|  |_| |_|_|\___|\__,_|\___\_\_| \_|        //
 //------------------------------------------------------//
-#include <iostream>
-
+#include <bits/stdc++.h>
 using namespace std;
-
 #define ll long long
 
-ll tongCSC(ll a1, ll n, ll d) {
-    return (n*(2 * a1 + (n-1) * d)) / 2;
-}
-
 void solve() {
-    ll n, k;
-    cin >> n >> k;
-    int result = ((tongCSC(1, k-1, 1) * (n / k) + tongCSC(1, n%k,1)) == k) ? 1 : 0;
+    set<ll> valid;
+    ll n, temp, result = -1;
+    cin >> n;
+    while(n--) {
+        cin >> temp;
+        if(result == -1) {
+            if(valid.count(temp)) {
+                result = temp;
+            } else {
+                valid.insert(temp);
+            }
+        }
+    }
     cout << result << endl;
 }
 
 int main() {
     int t;
     cin >> t;
-    while (t--) {
+    while(t--) {
         solve();
     }
 }
