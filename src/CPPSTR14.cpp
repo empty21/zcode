@@ -11,15 +11,23 @@ using namespace std;
 #define ll long long
 
 void solve() {
-    string inpStr;
-    getline(cin, inpStr);
-
+    string str;
+    getchar();
+    getline(cin, str);
+    smatch m;
+    regex re("\\w+");
+    int k = 0;
+    while (regex_search(str, m, re)) {
+        k++;
+        str = m.suffix().str();
+    }
+    cout << k << endl;
 }
 
 int main() {
     int t;
     cin >> t;
-    getchar();
+
     while(t--) {
         solve();
     }

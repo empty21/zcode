@@ -17,13 +17,8 @@ void solve() {
     cin >> n >> x;
     for(int i = 0; i < n; i++) {
         cin >> temp;
+        if(x == temp) pos = i + 1;
         arr.push_back(temp);
-    }
-
-    if(x >= arr[0]) {
-        pos = x - arr[0] + 1;
-    } else {
-        pos = n - arr[0] + x + 1;
     }
     cout << pos << endl;
 }
